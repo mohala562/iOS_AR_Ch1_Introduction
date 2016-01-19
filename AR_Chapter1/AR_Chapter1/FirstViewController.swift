@@ -8,9 +8,11 @@
 
 import UIKit
 import CoreMotion
+import CoreLocation
 
-class FirstViewController: UIViewController, UIAccelerometerDelegate {
+class FirstViewController: UIViewController, UIAccelerometerDelegate, CLLocationManagerDelegate {
     let mManager =  CMMotionManager()
+    let locationMg = CLLocationManager()
     
     @IBOutlet weak var xL: UILabel!
     @IBOutlet weak var yL: UILabel!
@@ -28,15 +30,36 @@ class FirstViewController: UIViewController, UIAccelerometerDelegate {
         
         imageView.image = UIImage(named: "splash.jpg")
         
+        locationMg.delegate = self
+        locationMg.headingFilter = 5
+        if CLLocationManager.locationServicesEnabled() && CLLocationManager.headingAvailable() {
+            locationMg.startUpdatingHeading()
+            locationMg.startUpdatingLocation()
+        }
+        
 //        if mManager.accelerometerAvailable{
 //            mManager.startAccelerometerUpdates()
 //            NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateAcceleraoMeter", userInfo: nil, repeats: true)
 //        }
         
-        if mManager.gyroAvailable{
-            mManager.startGyroUpdates()
-            NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateGyoMeter", userInfo: nil, repeats: true)
+//        if mManager.gyroAvailable{
+//            mManager.startGyroUpdates()
+//            NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: "updateGyoMeter", userInfo: nil, repeats: true)
+//        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        if newHeading.headingAccuracy > 0 {
+            let mh = newHeading.magneticHeading
+         //   let th = newHeading.trueHeading
+            print("heading is \(mh)")
+            let heading = -1 * M_PI * mh / 180
+            imageView.transform = CGAffineTransformMakeRotation(CGFloat(heading))
         }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
     }
     
     func updateAcceleraoMeter(){
