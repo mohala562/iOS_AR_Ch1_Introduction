@@ -12,6 +12,7 @@ import CoreLocation
 import MobileCoreServices
 import CoreMotion
 
+let concurrentQueue = dispatch_queue_create("hardware.ConcurrentQueue", DISPATCH_QUEUE_CONCURRENT)
 
 class CheckHardWare: NSObject {
     
