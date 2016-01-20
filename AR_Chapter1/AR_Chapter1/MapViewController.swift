@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MapKit
 
-class ViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate {
     let locationTV = UITextView()
     let mapView = MKMapView()
     let segmentControl = UISegmentedControl(items: ["Standard", "Satellite", "Hybrid"])
@@ -81,7 +81,7 @@ class ViewController: UIViewController, MKMapViewDelegate {
     
 }
 
-extension ViewController : CLLocationManagerDelegate{
+extension MapViewController : CLLocationManagerDelegate{
     func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
         locationTV.text = "Latitude \(newLocation.coordinate.latitude) \nLongitude \(newLocation.coordinate.longitude) \nHeight \(newLocation.verticalAccuracy)"
     }
