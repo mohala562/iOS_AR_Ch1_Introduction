@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <scenes>
-        <!--Sound View Controller-->
+        <!--Camera View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SoundViewController" customModule="AR_Chapter1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CameraViewController" customModule="AR_Chapter1" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,33 +18,42 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EtG-Wa-hBJ">
-                                <rect key="frame" x="137" y="86" width="46" height="30"/>
+                                <rect key="frame" x="46" y="501" width="46" height="30"/>
                                 <state key="normal" title="Start"/>
                                 <connections>
-                                    <action selector="startBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t1p-5X-ZA4"/>
+                                    <action selector="startBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="n9E-99-w87"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-vf-FGY">
-                                <rect key="frame" x="137" y="153" width="46" height="30"/>
+                                <rect key="frame" x="139" y="501" width="46" height="30"/>
                                 <state key="normal" title="Stop"/>
                                 <connections>
-                                    <action selector="stopBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9io-wg-upa"/>
+                                    <action selector="stopBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hzY-ot-c0o"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ege-oi-5QM">
-                                <rect key="frame" x="137" y="215" width="46" height="30"/>
+                                <rect key="frame" x="234" y="501" width="46" height="30"/>
                                 <state key="normal" title="Play"/>
                                 <connections>
-                                    <action selector="playBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FoR-gL-toj"/>
+                                    <action selector="playBtnDidClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7zj-w2-5ZS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="98v-F4-qlq">
+                                <rect key="frame" x="46" y="337" width="240" height="128"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P34-yW-IN2">
+                                <rect key="frame" x="46" y="43" width="240" height="205"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="playBtn" destination="Ege-oi-5QM" id="lgo-mq-UrT"/>
-                        <outlet property="startBtn" destination="EtG-Wa-hBJ" id="r8Z-ib-qdu"/>
-                        <outlet property="stopBtn" destination="gr6-vf-FGY" id="kbV-uL-d6r"/>
+                        <outlet property="imageView" destination="98v-F4-qlq" id="Y7S-pd-qQl"/>
+                        <outlet property="playBtn" destination="Ege-oi-5QM" id="DrY-cK-Xg2"/>
+                        <outlet property="startBtn" destination="EtG-Wa-hBJ" id="Gg1-R3-Py5"/>
+                        <outlet property="stopBtn" destination="gr6-vf-FGY" id="9Yx-fW-6G6"/>
+                        <outlet property="videoPreview" destination="P34-yW-IN2" id="RIw-xA-h6Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -23,6 +23,7 @@
 		6DEFB5F71C4E0BDB00D326EB /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFB5F61C4E0BDB00D326EB /* SoundViewController.swift */; };
 		6DEFB5F91C4E0CC400D326EB /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEFB5F81C4E0CC400D326EB /* AudioToolbox.framework */; };
 		6DEFB5FB1C4E0D4700D326EB /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DEFB5FA1C4E0D4700D326EB /* AVFoundation.framework */; };
+		6DEFB5FD1C4E3E2400D326EB /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DEFB5FC1C4E3E2400D326EB /* CameraViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		6DEFB5F61C4E0BDB00D326EB /* SoundViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
 		6DEFB5F81C4E0CC400D326EB /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		6DEFB5FA1C4E0D4700D326EB /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6DEFB5FC1C4E3E2400D326EB /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +137,7 @@
 				6D1B09431C4DE38D009B73EA /* FirstViewController.swift */,
 				6DEFB5F61C4E0BDB00D326EB /* SoundViewController.swift */,
 				6D1B09401C4DD619009B73EA /* MapAnnotation.swift */,
+				6DEFB5FC1C4E3E2400D326EB /* CameraViewController.swift */,
 				6DB2FF8F1C4CBDB400D24D50 /* Main.storyboard */,
 				6D1B09421C4DD61F009B73EA /* Resources */,
 			);
@@ -290,6 +293,7 @@
 				6DB2FFBB1C4CC03300D24D50 /* CheckHardWare.swift in Sources */,
 				6DB2FF8E1C4CBDB400D24D50 /* ViewController.swift in Sources */,
 				6DB2FF8C1C4CBDB400D24D50 /* AppDelegate.swift in Sources */,
+				6DEFB5FD1C4E3E2400D326EB /* CameraViewController.swift in Sources */,
 				6DEFB5F71C4E0BDB00D326EB /* SoundViewController.swift in Sources */,
 				6D1B09411C4DD619009B73EA /* MapAnnotation.swift in Sources */,
 			);
